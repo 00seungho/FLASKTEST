@@ -1,0 +1,31 @@
+{% extends "frangent.html" %}
+{% block title %} <title>미세먼지 프로젝트</title> {% endblock %}
+{% block top %} <img src="/static/assets/clear-day.png" alt="" width="40" height="40"> 미세먼지 {% endblock %}
+{% block menubar %}{% endblock %}
+{% block content %}
+<div class="text-center mt-5">
+    <h1>미세먼지 알려드림</h1>
+    {% if air == 'blue' %}
+    <h1>맑음</h1>
+    {% elif air == 'green' %}
+    <h1>좋음</h1>
+    {% elif air == 'red' %}
+    <h1>나쁨</h1>
+    {% elif air == 'black' %}
+    <h1>매우 나쁨</h1>
+    {% endif %}
+    <img src="/static/assets/green.png" alt="">
+    <h1>좋음</h1>
+    <ul style="border: 1px solid black;">
+        <li>
+            <p>미세먼지:</p>
+        </li>
+        <li>
+            <p>초미세먼지:</p>
+        </li>
+        <li>
+            <p>오존:</p>
+        </li>
+    </ul>
+</div>
+{% endblock %}
